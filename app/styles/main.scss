@@ -2,10 +2,20 @@
 
 h1 {
 	background-color: #61E8DF;
+	font-family: "Lucida Console", Courier, monospace;
 }
 
 .output {
-	margin: 45px;
+	margin: 35px;
 	border: 1px solid lightgray;
     box-shadow: 4px 4px #CCE6E4;
+}
+
+.chatBox {
+	margin: 20px;
+}
+
+.messageContainer {
+	margin: 5px;
+	border-bottom: 1px solid #CCE6E4;
 }

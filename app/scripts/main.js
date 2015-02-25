@@ -13,7 +13,7 @@ var fb = new Firebase('https://xhatter.firebaseio.com/');
 
 	  fb.push({name: name, text: text});
 	  evt.preventDefault();
-});
+    });
 
 
 fb.on('child_added', function (snap) {
@@ -24,10 +24,18 @@ fb.on('child_added', function (snap) {
 });
 
 function addChatMessage(name, text) {
-  $('<div></div>')
+  $('<div class="messageContainer"></div>')
     .text(text)
     .prepend(
       $('<strong></strong>').text(name + ': ')
     )
     .appendTo($('.output'));
+    limitMessage();
+}
+
+function limitMessage(){
+  var messageList = $('.messageContainer').length;
+  if (messageList >= 20 ) {
+  	$('.messageContainer:first').remove();
+  }
 }
