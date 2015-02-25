@@ -1,5 +1,17 @@
 'use script';
 
-var $tbody = $('#tbody'),
-    FIREBASE_URL = 'https://xhatter.firebaseio.com',
-    fb           = new Firebase(FIREBASE_URL);
+var fb = new Firebase('https://xhatter.firebaseio.com/');
+
+
+    $('form').submit(function (evt) {
+	  var $form = $(evt.target),
+	      $nameInput = $form.find('input[name="username"]'),
+	      $textInput = $form.find('input[name="chatBox"]'),
+	      name   = $nameInput.val(),
+	      text   = $textInput.val();
+
+	  $textInput.val('');
+
+	  fb.push({name: name, text: text});
+	  evt.preventDefault();
+});

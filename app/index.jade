@@ -11,14 +11,17 @@ html(lang='en-US')
       <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
       .container
-        h1 xhatter
+        .row
+          h1 xhatter
 
-        .chatBox
-           form
-             input(type="text" name="username" placeholder="Adam")
-             input(type="textarea" name="chatBox" placeholder="Say What?")
-             button#sendButton Send
+        .row
+           form(action="#")
+             input(type="text" name="username" placeholder="Adam" required)
+             input(type="textarea" name="chatBox" placeholder="Say What?" required)
+             input(type="submit" value="Send")
 
+        .row
+          .output
 
       // build:js js/vendor.min.js
       // bower:js
