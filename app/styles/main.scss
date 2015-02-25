@@ -9,10 +9,17 @@ h1 {
 	margin: 35px;
 	border: 1px solid lightgray;
     box-shadow: 4px 4px #79F2EA;
+    max-width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .chatBox {
 	margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .messageContainer {
